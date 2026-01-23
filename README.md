@@ -148,7 +148,7 @@ vercel --prod
 | `SMTP_PORT` | SMTP 端口 | `465` |
 | `SMTP_USER` | 163 邮箱地址 | `xxx@163.com` |
 | `SMTP_PASS` | 163 邮箱授权码 | `ABCDEFGHIJKLMNOP` |
-| `MAX_FILE_SIZE` | 文件大小限制（字节） | `10485760` |
+| `MAX_FILE_SIZE` | 文件大小限制（字节） | `20971520` |
 
 ### 6. 设置 Webhook
 
