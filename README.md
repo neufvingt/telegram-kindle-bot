@@ -182,7 +182,7 @@ TELEGRAM_BOT_TOKEN=xxx npx ts-node scripts/set-webhook.ts your-app.vercel.app
 
 | 属性 | 值 |
 |------|-----|
-| 行高 | 1.4 |
+| 行高 | 1.5 |
 | 段间距 | 0.5em |
 
 ## 项目结构
