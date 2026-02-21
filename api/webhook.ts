@@ -45,7 +45,7 @@ const HELP_MESSAGE = `📚 <b>Kindle Bot 使用说明</b>
 
 发送 <b>EPUB</b> 文件：
 • 自动调整行高和段间距
-• 清理文件名中的 (Z-Library)
+• 清理文件名中的 (Z-Library) 及网站域名
 • 发送到您的 Kindle
 
 ⚠️ 文件大小限制：${Math.round(MAX_FILE_SIZE / 1024 / 1024)}MB`;

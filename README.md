@@ -16,7 +16,7 @@
 ### EPUB 文件
 - 调整行高为 1.4
 - 调整段间距为 0.5em
-- 去除文件名中的 `(Z-Library)`
+- 去除文件名中的 `(Z-Library)` 及网站域名标记（如 `(z-library.sk, 1lib.sk, z-lib.sk)`）
 - 发送到 Kindle
 
 ### Bot 命令
@@ -59,6 +59,7 @@
 
 - 前缀：`【完结】`、`【237】`、`[精校]`、`（全本）` 等
 - 后缀：`(精校)`、`[校对版]`、`【完整版】`、`(出版)` 等
+- 网站域名标记：`(z-library.sk, 1lib.sk, z-lib.sk)` 等
 
 示例：`【完结】《三体》作者：刘慈欣(精校版).txt` → `三体.epub`
 
@@ -205,6 +206,13 @@ telegram-kindle-bot/
 ├── vercel.json
 └── .env.example
 ```
+
+## 更新日志
+
+### 2026-02-21
+
+- 新增：清理文件名中括号内的网站域名标记，如 `夜晚的潜水艇 (z-library.sk, 1lib.sk, z-lib.sk).epub` → `夜晚的潜水艇.epub`
+- 同时适用于 TXT 和 EPUB 文件的文件名处理
 
 ## License
 

@@ -1,9 +1,11 @@
 import JSZip from 'jszip';
-import { EPUB_STYLES, FILENAME_CLEANUP_REGEX } from './config.js';
+import { EPUB_STYLES, FILENAME_CLEANUP_REGEX, FILENAME_SITE_CLEANUP_REGEX } from './config.js';
 
 // 清理文件名
 export function cleanFilename(filename: string): string {
-  return filename.replace(FILENAME_CLEANUP_REGEX, '');
+  return filename
+    .replace(FILENAME_SITE_CLEANUP_REGEX, '')
+    .replace(FILENAME_CLEANUP_REGEX, '');
 }
 
 // 调整EPUB样式

@@ -43,6 +43,9 @@ export const EPUB_STYLES = {
 // 文件名清理正则（Z-Library 各种变体）
 export const FILENAME_CLEANUP_REGEX = /[\s_]*[\(\[（【]?Z[-_]?Library[\)\]）】]?\s*/gi;
 
+// 文件名清理正则（括号内包含网站域名，如 (z-library.sk, 1lib.sk, z-lib.sk)）
+export const FILENAME_SITE_CLEANUP_REGEX = /\s*[\(\[（【]\s*[\w.-]+\.\w{2,}(?:\s*,\s*[\w.-]+\.\w{2,})*\s*[\)\]）】]/g;
+
 // 书名作者提取正则（从文件名）
 // 注意：顺序很重要，更具体的模式放前面
 export const BOOK_INFO_PATTERNS = [

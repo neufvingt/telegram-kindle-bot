@@ -9,6 +9,7 @@ import {
   EPUB_STYLES,
   BOOK_INFO_PATTERNS,
   CONTENT_INFO_PATTERNS,
+  FILENAME_SITE_CLEANUP_REGEX,
 } from './config.js';
 import {
   detectAndConvertEncoding,
@@ -30,6 +31,9 @@ export interface Chapter {
 // 从文件名提取书名和作者
 export function extractBookInfoFromFilename(filename: string): BookInfo {
   let nameWithoutExt = filename.replace(/\.(txt|epub)$/i, '');
+
+  // 清理括号内的网站域名（如 (z-library.sk, 1lib.sk, z-lib.sk)）
+  nameWithoutExt = nameWithoutExt.replace(FILENAME_SITE_CLEANUP_REGEX, '');
 
   // 清理所有前缀标签：【xxx】[xxx]（xxx）(xxx) 等
   // 包括：【237】【完结】【番15】【番外全】【番全】【补番x~x】【补章x~x】【车版】【车版番】【车版完结】【车版番全】等
